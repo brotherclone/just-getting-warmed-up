@@ -14,15 +14,15 @@ def create_midi(sequence, tempo, volume, file_name, duration=1):
 
     Parameters
     ----------
-    :duration: int
+    duration: int
         note duration in bpm unit
-    :file_name: str
+    file_name: str
         desired file name for the midi output
-    :volume: int
+    volume: int
         volume of each note. I usually "humanize" MIDI so I didn't see the need to create different velocities here.
-    :tempo: int
+    tempo: int
         BPM of the midi file
-    :sequence: list
+    sequence: list
         The sequence of notes, as MIDI values, to write
     """
     track = 0
@@ -43,11 +43,11 @@ def convert_sequence(temperatures, increments, midi_note_min=0):
 
     Takes a list of temperatures and increments, both floats and creates a MIDI equivalent
 
-    :temperatures: list
+    temperatures: list
         Temperatures as floats
-    :increments: list
+    increments: list
         A list of segments to compare the temperatures against to get the MIDI notes.
-    :midi_note_min: int
+    midi_note_min: int
         The lowest MIDI note used as a basis for sequence creation
 
     Returns
